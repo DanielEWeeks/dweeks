@@ -74,6 +74,17 @@ git remote add origin https://github.com/UserName/RepositoryName
 git push -u origin master
 ```
 
+I added the `.Rproj.user` folder and the `dweeks.Rproj` file to the repository by mistake. 
+To remove them from the repository while retaining the local copies, do the following:
+
+```
+git rm --cached -r .Rproj.user
+git rm --cached dweeks.Rproj
+git commit -m "Removing .Rproj.user and dweeks.Rproj"
+git push
+```
+
+And adjust the `.gitignore` file appropriately.
 
 ## Adding Travis CI support 
 
@@ -88,3 +99,18 @@ warnings_are_errors: true
 ```
 
 And adjust the `.Rbuildignore` file to ignore the `.travis.yml` file.
+
+## Adding Travis CI support for lintr
+
+Add these lines to the end of the .travis.yml file:
+
+```
+addons:
+  apt:
+   r_github_packages:
+   - jimhester/lintr
+
+after_success:
+  - R CMD INSTALL $PKG_TARBALL
+  - Rscript -e 'lintr::lint_package()'
+```
