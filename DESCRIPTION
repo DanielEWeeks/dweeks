@@ -1,0 +1,15 @@
+Package: dweeks
+Type: Package
+Title: An R package with Dan Weeks' personal R code
+Version: 0.1.0
+Author: Daniel E. Weeks <weeks@pitt.edu>
+Maintainer: Daniel E. Weeks <weeks@pitt.edu>
+Description: Customized R functions.
+License: GPL-2
+Encoding: UTF-8
+LazyData: true
+Suggests: 
+    testthat (>= 2.1.0),
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr

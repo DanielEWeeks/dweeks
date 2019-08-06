@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1565111319636.000,
+    "dirty" : true,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "7CFFCC40",
+    "lastKnownWriteTime" : 1565112141,
+    "last_content_update" : 1565112335863,
+    "path" : "~/data/src/dweeks/vignettes/R-projects.Rmd",
+    "project_path" : "vignettes/R-projects.Rmd",
+    "properties" : {
+        "cursorPosition" : "64,0",
+        "scrollLine" : "49"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}
