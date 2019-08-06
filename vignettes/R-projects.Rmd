@@ -56,3 +56,32 @@ and then edit the newly-created R file to implement the desired unit tests.
 usethis::use_vignette("R-projects")
 ```
 
+## To add the package to GitHub
+
+Change into the package directory, and then
+
+```
+git init
+git add .
+git commit -a
+```
+
+Then make an empty repository on GitHub, and then
+
+```
+git remote add origin https://github.com/UserName/RepositoryName
+git push -u origin master
+```
+
+
+## Adding Travis CI support 
+
+Create a .travis.yml in the root directory of the package that contains these lines:
+
+```
+language: r
+sudo: false
+cache: packages
+
+warnings_are_errors: true
+```
