@@ -62,6 +62,7 @@ Change into the package directory, and then
 
 ```
 git init
+# Adjust the .gitignore file appropriately before doing the next command.
 git add .
 git commit -a
 ```
@@ -85,3 +86,5 @@ cache: packages
 
 warnings_are_errors: true
 ```
+
+And adjust the `.Rbuildignore` file to ignore the `.travis.yml` file.
