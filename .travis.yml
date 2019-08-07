@@ -4,9 +4,12 @@ cache: packages
 
 warnings_are_errors: true
 
-r_packages:
-  - lintr
+# r_packages:
+#  - lintr
+#
+# after_success:
+#  - R CMD INSTALL $PKG_TARBALL
+#  - Rscript -e 'lintr::lint_package()'
 
-after_success:
-  - R CMD INSTALL $PKG_TARBALL
-  - Rscript -e 'lintr::lint_package()'
+notifications:
+  email: false
