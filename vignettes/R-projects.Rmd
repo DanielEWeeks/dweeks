@@ -102,6 +102,8 @@ And adjust the `.Rbuildignore` file to ignore the `.travis.yml` file.
 
 ## Adding Travis CI support for lintr
 
+### Approach 1: via the .travis.yml file:
+
 Add these lines to the end of the .travis.yml file:
 
 ```
@@ -112,6 +114,23 @@ r_packages:
 after_success:
   - R CMD INSTALL $PKG_TARBALL
   - Rscript -e 'lintr::lint_package()'
+```
+
+### Approach 2: via a testthat function
+
+```
+if (requireNamespace("lintr", quietly = TRUE)) {
+  context("lints")
+  test_that("Package Style", {
+    lintr::expect_lint_free()
+  })
+}
+```
+
+and add this to the DESCRIPTION file:
+
+```
+Suggests: lintr
 ```
 
 ## Manually checking your package with lintr
