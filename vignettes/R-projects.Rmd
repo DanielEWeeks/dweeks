@@ -139,3 +139,9 @@ Suggests: lintr
 library(lintr)
 lint_package()
 ```
+
+## Use pkgdown to build a website for your package
+
+```
+pkgdown::build_site()
+```

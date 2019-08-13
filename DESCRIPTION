@@ -14,3 +14,4 @@ Suggests:
     rmarkdown,
     lintr
 VignetteBuilder: knitr
+RoxygenNote: 6.1.1
