@@ -28,21 +28,21 @@ left_join_check <- function(x, y, by = NULL, copy = FALSE, suffix = c(".x", ".y"
         # 'by' is an unamed vector
         ndupIDs.x = sum(duplicated(x[,by]))
         if (ndupIDs.x != 0) {
-          warning(paste0("Duplicated IDs in x in the ",by, " column"))
+          warning(paste0("Duplicated IDs in x in the ",by, " column. "))
         }
         ndupIDs.y = sum(duplicated(y[,by]))
         if (ndupIDs.y != 0) {
-          warning(paste0("Duplicated IDs in y in the ",by, " column"))
+          warning(paste0("Duplicated IDs in y in the ",by, " column. "))
         }
       } else {
         # 'by' is a named vector
         ndupIDs.x = sum(duplicated(x[,names(by)]))
         if (ndupIDs.x != 0) {
-          warning(paste0("Duplicated IDs in x in the ",names(by), " column"))
+          warning(paste0("Duplicated IDs in x in the ",names(by), " column. "))
         }
         ndupIDs.y = sum(duplicated(y[,by]))
         if (ndupIDs.y != 0) {
-          warning(paste0("Duplicated IDs in y in the ",by, " column"))
+          warning(paste0("Duplicated IDs in y in the ",by, " column. "))
         }
       }
     } else {
@@ -51,11 +51,11 @@ left_join_check <- function(x, y, by = NULL, copy = FALSE, suffix = c(".x", ".y"
         # If there is only one field in common, we can do these checks:
         ndupIDs.x = sum(duplicated(x[,by1]))
         if (ndupIDs.x != 0) {
-          warning(paste0("Duplicated IDs in x in the ",by1, " column"))
+          warning(paste0("Duplicated IDs in x in the ",by1, " column. "))
         }
         ndupIDs.y = sum(duplicated(y[,by1]))
         if (ndupIDs.y != 0) {
-          warning(paste0("Duplicated IDs in y in the ",by1, " column"))
+          warning(paste0("Duplicated IDs in y in the ",by1, " column. "))
         }
 
       }
