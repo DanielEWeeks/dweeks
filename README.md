@@ -2,3 +2,10 @@
 
 # dweeks
 An R package with Dan Weeks' personal R code
+
+To install from GitHub:
+
+```
+library(devtools)
+install_github("DanielEWeeks/dweeks")
+```
