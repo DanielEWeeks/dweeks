@@ -8,6 +8,8 @@ Description: Customized R functions.
 License: GPL-2
 Encoding: UTF-8
 LazyData: true
+Imports:
+    dplyr
 Suggests: 
     testthat (>= 2.1.0),
     knitr,
