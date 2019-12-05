@@ -64,7 +64,7 @@ left_join_check <- function(x, y, by = NULL, copy = FALSE, suffix = c(".x", ".y"
     r <- left_join(x, y, by, copy, suffix)
     d.r <- nrow(r)
     if (d.x != d.r) {
-      warning(paste0("nrow(x)=",d.x," != nrow(join)=",d.r))
+      warning(paste0("nrow(x)=",d.x," != nrow(join)=",d.r,". "))
     }
     return(r)
 }
